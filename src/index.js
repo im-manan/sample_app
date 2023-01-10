@@ -1,22 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import 'semantic-ui-css/semantic.min.css';
-import './app/layout/styles.css'
-import App from './app/layout/App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "semantic-ui-css/semantic.min.css";
+import "./app/layout/styles.css";
+import App from "./app/layout/App";
+import reportWebVitals from "./reportWebVitals";
+import {BrowserRouter} from "react-router-dom";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 function render() {
   root.render(
+    <BrowserRouter>
       <App />
+    </BrowserRouter>
   );
 }
 
-if(module.hot) {
-  module.hot.accept('./app/layout/App', function() {
+if (module.hot) {
+  module.hot.accept("./app/layout/App", function () {
     setTimeout(render);
-  })
+  });
 }
 
 render();

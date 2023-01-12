@@ -8,6 +8,7 @@ import { EventDetailedPage } from "../../features/events/eventDetailed/EventDeta
 import EventForm from "../../features/events/eventForm/EventForm";
 import HomePage from "../../features/home/HomePage";
 import Sandbox from "../../features/sandbox/SandBox";
+import ModalManager from "../common/modals/ModalManager";
 
 function App() {
   // const title = React.createElement('h1', {}, 'Revents no JSX')
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+      <ModalManager />
       <Route exact path="/" component={HomePage} />
       <Route
         path={"/(.+)"}
